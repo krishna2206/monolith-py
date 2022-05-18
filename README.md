@@ -3,7 +3,7 @@ A simple python wrapper to [Y2Z's monolith](https://github.com/Y2Z/monolith), a 
 
 **Requires Python 3.7+ installed**.
 
-**Works only on linux at the moment**.
+**Works only on Linux at the moment**.
 
 ## How to install
 ```bash
@@ -40,10 +40,10 @@ monolith.download("https://github.com/Y2Z/monolith")
 - `no_image` (bool) : Remove images
 
 ## Options not yet added
-- -`b`: Use custom base URL
-- -`I`: Isolate the document
-- -`k`: Accept invalid X.509 (TLS) certificates
-- -`M`: Don't add timestamp and URL information
+- `-b`: Use custom base URL
+- `-I`: Isolate the document
+- `-k`: Accept invalid X.509 (TLS) certificates
+- `-M`: Don't add timestamp and URL information
 
 ## TO-DO
 - Support for Windows
