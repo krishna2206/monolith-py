@@ -49,17 +49,15 @@ class Monolith:
 	def __init__(self, options: dict=None):
 		self.options = {"output": "page.html"} if options is None else options
 
-	def download(self, url):
+	def download_webpage(self, url):
 		cmd_options = self.__parse_options(self.options)
 		command = (EXECUTABLE_PATH, url) + cmd_options
 
-		# with Popen(command, shell=False, stdout=PIPE) as child_process:
 		child_process = None
 		try:
 			child_process = Popen(command, shell=False, stdout=PIPE)
 		except KeyboardInterrupt:
 			child_process.kill()
-			return None
 		except CalledProcessError as process_error:
 			raise CommandRunError(
 				f"An error occurred while running command. {type(process_error).__name__} {process_error}")
@@ -70,7 +68,6 @@ class Monolith:
 					break
 				if output:
 					print(output.strip().decode())
-			# rc = child_process.poll()
 
 	@staticmethod
 	def __parse_options(p_options: dict):

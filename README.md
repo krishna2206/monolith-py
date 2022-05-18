@@ -20,7 +20,7 @@ monolith_opts = {
 }
 
 monolith = Monolith(monolith_opts)
-monolith.download("https://github.com/Y2Z/monolith")
+monolith.download_webpage("https://github.com/Y2Z/monolith")
 ```
 
 ## Available options

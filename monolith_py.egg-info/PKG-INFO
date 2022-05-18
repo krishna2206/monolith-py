@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: monolith-py
-Version: 1.0.0
+Version: 1.0.1
 Summary: A simple python wrapper to https://github.com/Y2Z/monolith.
 Home-page: https://github.com/krishna2206/monolith-py
 Author: krishna2206
@@ -18,7 +18,12 @@ A simple python wrapper to [Y2Z's monolith](https://github.com/Y2Z/monolith), a 
 
 **Requires Python 3.7+ installed**.
 
-**Works only on linux at the moment**.
+**Works only on Linux at the moment**.
+
+## How to install
+```bash
+pip install git+https://github.com/krishna2206/monolith-py.git#egg=monolith-py
+```
 
 ## Usage
 Download a webpage
@@ -30,7 +35,7 @@ monolith_opts = {
 }
 
 monolith = Monolith(monolith_opts)
-monolith.download("https://github.com/Y2Z/monolith")
+monolith.download_webpage("https://github.com/Y2Z/monolith")
 ```
 
 ## Available options
@@ -50,10 +55,10 @@ monolith.download("https://github.com/Y2Z/monolith")
 - `no_image` (bool) : Remove images
 
 ## Options not yet added
-- -`b`: Use custom base URL
-- -`I`: Isolate the document
-- -`k`: Accept invalid X.509 (TLS) certificates
-- -`M`: Don't add timestamp and URL information
+- `-b`: Use custom base URL
+- `-I`: Isolate the document
+- `-k`: Accept invalid X.509 (TLS) certificates
+- `-M`: Don't add timestamp and URL information
 
 ## TO-DO
 - Support for Windows
