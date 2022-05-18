@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+monolith_py.egg-info/PKG-INFO
+monolith_py.egg-info/SOURCES.txt
+monolith_py.egg-info/dependency_links.txt
+monolith_py.egg-info/top_level.txt
+monolithpy/__init__.py
+monolithpy/monolithpy.py
+monolithpy/bin/monolith
