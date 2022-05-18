@@ -5,6 +5,11 @@ A simple python wrapper to [Y2Z's monolith](https://github.com/Y2Z/monolith), a 
 
 **Works only on linux at the moment**.
 
+## How to install
+```bash
+pip install git+https://github.com/krishna2206/monolith-py.git#egg=monolith-py
+```
+
 ## Usage
 Download a webpage
 ```python
