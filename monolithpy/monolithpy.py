@@ -68,6 +68,7 @@ class Monolith:
 					break
 				if output:
 					print(output.strip().decode())
+			return child_process.returncode 
 
 	@staticmethod
 	def __parse_options(p_options: dict):
