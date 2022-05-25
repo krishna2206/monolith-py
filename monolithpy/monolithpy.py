@@ -59,8 +59,7 @@ class Monolith:
 		except KeyboardInterrupt:
 			child_process.kill()
 		except CalledProcessError as process_error:
-			raise CommandRunError(
-				f"An error occurred while running command. {type(process_error).__name__} {process_error}")
+			print(f"An error occurred while running command. {type(process_error).__name__} {process_error}")
 		else:
 			while True:
 				output = child_process.stdout.readline()
@@ -68,6 +67,7 @@ class Monolith:
 					break
 				if output:
 					print(output.strip().decode())
+		finally:
 			return child_process.returncode 
 
 	@staticmethod
@@ -104,5 +104,3 @@ class MonolithException(Exception):
 class ArgsParseError(MonolithException):
 	"""Raised when failed to parse options"""
 
-class CommandRunError(MonolithException):
-	"""Raised when an error occurred while running command"""
