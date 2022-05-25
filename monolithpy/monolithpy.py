@@ -68,7 +68,6 @@ class Monolith:
 				if output:
 					print(output.strip().decode())
 		finally:
-			print(f"FUCKING EXIT CODE : {child_process.returncode}")
 			return child_process.returncode 
 
 	@staticmethod
